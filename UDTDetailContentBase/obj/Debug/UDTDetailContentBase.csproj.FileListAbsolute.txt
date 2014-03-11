@@ -1,0 +1,7 @@
+E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBase\bin\Debug\UDTDetailContentBase.dll
+E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBase\bin\Debug\UDTDetailContentBase.pdb
+E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.csprojResolveAssemblyReference.cache
+E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.UDTSingleForm.resources
+E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.csproj.GenerateResource.Cache
+E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.dll
+E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.pdb

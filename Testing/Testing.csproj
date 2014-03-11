@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FD7F6EF-41F2-4D3F-BF8E-C91F6DAA2BFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Testing</RootNamespace>
+    <AssemblyName>Testing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FISCA, Version=2.1.1.19, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Authentication, Version=1.9.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Core, Version=1.0.1.2, Culture=neutral, PublicKeyToken=a269f410f9e2a287, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Data, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Deployment, Version=1.0.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Deployment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Deployment.Administration, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Deployment.Administration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAClient, Version=1.0.1.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.DSAClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAUtil, Version=3.9.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.DSAUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.LogAgent, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.LogAgent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Login, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Login.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Permission, Version=1.1.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Permission.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation, Version=1.1.0.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Synchronization, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.Synchronization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.UDT, Version=1.0.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FISCA.UDT.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="MyDetailContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyDetailContent.Designer.cs">
+      <DependentUpon>MyDetailContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyMultiDetailContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyMultiDetailContent.Designer.cs">
+      <DependentUpon>MyMultiDetailContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUDT.cs" />
+    <Compile Include="MyUDTM.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\FISCA.Authentication.dll" />
+    <Content Include="Lib\FISCA.Authentication.pdb" />
+    <Content Include="Lib\FISCA.Authentication.xml" />
+    <Content Include="Lib\FISCA.Core.dll" />
+    <Content Include="Lib\FISCA.Core.pdb" />
+    <Content Include="Lib\FISCA.Core.xml" />
+    <Content Include="Lib\FISCA.Data.dll" />
+    <Content Include="Lib\FISCA.Data.pdb" />
+    <Content Include="Lib\FISCA.Data.xml" />
+    <Content Include="Lib\FISCA.Deployment.Administration.dll" />
+    <Content Include="Lib\FISCA.Deployment.Administration.pdb" />
+    <Content Include="Lib\FISCA.Deployment.Administration.xml" />
+    <Content Include="Lib\FISCA.Deployment.dll" />
+    <Content Include="Lib\FISCA.Deployment.pdb" />
+    <Content Include="Lib\FISCA.Deployment.xml" />
+    <Content Include="Lib\FISCA.dll" />
+    <Content Include="Lib\FISCA.DSAClient.dll" />
+    <Content Include="Lib\FISCA.DSAClient.pdb" />
+    <Content Include="Lib\FISCA.DSAClient.xml" />
+    <Content Include="Lib\FISCA.DSAUtil.dll" />
+    <Content Include="Lib\FISCA.DSAUtil.pdb" />
+    <Content Include="Lib\FISCA.DSAUtil.xml" />
+    <Content Include="Lib\FISCA.LogAgent.dll" />
+    <Content Include="Lib\FISCA.LogAgent.pdb" />
+    <Content Include="Lib\FISCA.LogAgent.xml" />
+    <Content Include="Lib\FISCA.Login.dll" />
+    <Content Include="Lib\FISCA.Login.pdb" />
+    <Content Include="Lib\FISCA.Login.xml" />
+    <Content Include="Lib\FISCA.pdb" />
+    <Content Include="Lib\FISCA.Permission.dll" />
+    <Content Include="Lib\FISCA.Permission.pdb" />
+    <Content Include="Lib\FISCA.Permission.xml" />
+    <Content Include="Lib\FISCA.Presentation.dll" />
+    <Content Include="Lib\FISCA.Presentation.pdb" />
+    <Content Include="Lib\FISCA.Presentation.xml" />
+    <Content Include="Lib\FISCA.Synchronization.dll" />
+    <Content Include="Lib\FISCA.Synchronization.pdb" />
+    <Content Include="Lib\FISCA.Synchronization.xml" />
+    <Content Include="Lib\FISCA.UDT.dll" />
+    <Content Include="Lib\FISCA.UDT.pdb" />
+    <Content Include="Lib\FISCA.UDT.xml" />
+    <Content Include="Lib\FISCA.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lib\fisca.config" />
+    <None Include="Lib\FISCA.dll.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UDTDetailContentBase\UDTDetailContentBase.csproj">
+      <Project>{A03943B1-4E50-4709-8FE0-521FFF988AE2}</Project>
+      <Name>UDTDetailContentBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyDetailContent.resx">
+      <DependentUpon>MyDetailContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyMultiDetailContent.resx">
+      <DependentUpon>MyMultiDetailContent.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
