@@ -35,21 +35,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <HintPath>..\Library\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="FISCA">
-      <HintPath>..\..\FiscaRuntime\kernel\FISCA.dll</HintPath>
+      <HintPath>..\Library\FISCA.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Authentication">
-      <HintPath>..\..\FiscaRuntime\kernel\FISCA.Authentication.dll</HintPath>
+      <HintPath>..\Library\FISCA.Authentication.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Presentation">
-      <HintPath>..\..\FiscaRuntime\kernel\FISCA.Presentation.dll</HintPath>
+      <HintPath>..\Library\FISCA.Presentation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.UDT">
-      <HintPath>..\..\FiscaRuntime\kernel\FISCA.UDT.dll</HintPath>
+      <HintPath>..\Library\FISCA.UDT.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

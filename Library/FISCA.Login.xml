@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FISCA.Login</name>
+    </assembly>
+    <members>
+        <member name="T:FISCA.Login.LoginForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Login.LoginForm.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Login.LoginForm.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="accessPoint"></param>
+            <param name="targetContract"></param>
+        </member>
+        <member name="F:FISCA.Login.LoginForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FISCA.Login.LoginForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:FISCA.Login.LoginForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:FISCA.Login.LoginForm.Result">
+            <summary>
+            取得登入後的連線物件。
+            </summary>
+        </member>
+        <member name="P:FISCA.Login.LoginForm.ConnectExceptionOccur">
+            <summary>
+            當使用者按下「登入」如果發生 Exception，會呼叫此 Delegate 處理。
+            </summary>
+        </member>
+        <member name="T:FISCA.Login.PrivateResource">
+            <summary>
+              用於查詢當地語系化字串等的強型別資源類別
+            </summary>
+        </member>
+        <member name="P:FISCA.Login.PrivateResource.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:FISCA.Login.PrivateResource.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強型別資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="T:FISCA.Login.DSAServiceProvider">
+            <summary>
+            管理 DSA 連線，與提供連立連線的行為。
+            </summary>
+        </member>
+        <member name="M:FISCA.Login.DSAServiceProvider.GetSecurityToken">
+            <summary>
+            取得有效的 SecurityToken。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Login.DSAServiceProvider.PopupLogin(System.String,System.String)">
+            <summary>
+            顯示登入視窗，請使用者登入系統。
+            </summary>
+            <param name="accessPoint">要登入的 AccessPoint，如果不指定則使用者可以自由選擇。</param>
+            <param name="contractName">要登入的 Contract，如果不指定，則會登入預設 Contract。</param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Login.DSAServiceProvider.Login(System.String,System.String)">
+            <summary>
+            向系統要求某個登入連線，如果系統無法連線到該位置時，
+            將產生 Exception。
+            </summary>
+            <param name="accessPoint"/>
+            <param name="contractName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Login.DSAServiceProvider.Get(System.String)">
+            <summary>
+            取得指定的登入連線。
+            </summary>
+            <param name="accessPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Login.DSAServiceProvider.Contains(System.String)">
+            <summary>
+            判斷指定的登入連線是否已經存在。
+            </summary>
+            <param name="accessPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Login.DSAServiceProvider.Default">
+            <summary>
+            取得主要的登入連線。
+            </summary>
+        </member>
+        <member name="T:FISCA.Login.DSAService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Login.DSAService.#ctor(FISCA.DSA.Connection)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Login.DSAService.CallService(System.String,FISCA.DSA.Envelope)">
+            <summary>
+            
+            </summary>
+            <param name="serviceName"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Login.DSAService.CallService(System.String,FISCA.DSA.Envelope,FISCA.DSA.BatchManager)">
+            <summary>
+            
+            </summary>
+            <param name="serviceName"></param>
+            <param name="request"></param>
+            <param name="batch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Login.DSAService.NewBatchManager">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Login.DSAService.Connection">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

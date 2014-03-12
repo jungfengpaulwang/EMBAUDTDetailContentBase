@@ -1,0 +1,1488 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Campus.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:Campus.Windows.ValueStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.ValueStatus.Clean">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.ValueStatus.Dirty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ChangeEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ChangeEventArgs.#ctor(Campus.Windows.ValueStatus)">
+            <summary>
+            
+            </summary>
+            <param name="status"></param>
+        </member>
+        <member name="P:Campus.Windows.ChangeEventArgs.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ChangeListen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ChangeListen.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ChangeListen.Add(Campus.Windows.IChangeSource)">
+            <summary>
+            新增「狀態收聽者」。
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:Campus.Windows.ChangeListen.Remove(Campus.Windows.IChangeSource)">
+            <summary>
+            移除「狀態收聽者」。
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:Campus.Windows.ChangeListen.Contains(Campus.Windows.IChangeSource)">
+            <summary>
+            是否已包含了「狀態收聽者」。
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.ChangeListen.SuspendListen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ChangeListen.ResumeListen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ChangeListen.Reset">
+            <summary>
+            將目前值的狀態設成「Clean」。
+            </summary>
+        </member>
+        <member name="E:Campus.Windows.ChangeListen.StatusChanged">
+            <summary>
+            當值的狀態改變時發生。
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ChangeSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.IChangeSource">
+            <summary>
+            代表資料變化的收聽者。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.IChangeSource.Reset">
+            <summary>
+            重設值的狀態為 Clean。
+            </summary>
+        </member>
+        <member name="E:Campus.Windows.IChangeSource.StatusChanged">
+            <summary>
+            當值改變時發生。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IChangeSource.Suspend">
+            <summary>
+            是否停止觸發 StatusChanged 事件。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ChangeSource.RaiseStatusChanged(Campus.Windows.ValueStatus)">
+            <summary>
+            
+            </summary>
+            <param name="status"></param>
+        </member>
+        <member name="M:Campus.Windows.ChangeSource.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Campus.Windows.ChangeSource.StatusChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ChangeSource.Suspend">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.CheckBoxSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.CheckBoxSource.#ctor(System.Windows.Forms.CheckBox[])">
+            <summary>
+            
+            </summary>
+            <param name="controls"></param>
+        </member>
+        <member name="M:Campus.Windows.CheckBoxSource.Reset">
+            <summary>
+            重設狀態為「Clean」。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.CheckBoxSource.Controls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.CheckBoxXSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.CheckBoxXSource.#ctor(DevComponents.DotNetBar.Controls.CheckBoxX[])">
+            <summary>
+            
+            </summary>
+            <param name="controls"></param>
+        </member>
+        <member name="M:Campus.Windows.CheckBoxXSource.Reset">
+            <summary>
+            重設狀態為「Clean」。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.CheckBoxXSource.Controls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ComboBoxSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ComboBoxSource.#ctor(System.Windows.Forms.ComboBox,Campus.Windows.ComboBoxSource.ListenAttribute)">
+            <summary>
+            
+            </summary>
+            <param name="control"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:Campus.Windows.ComboBoxSource.#ctor(System.Windows.Forms.ComboBox,Campus.Windows.ComboBoxSource.ListenAttribute,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="control"></param>
+            <param name="target"></param>
+            <param name="listenOnValidated"></param>
+        </member>
+        <member name="M:Campus.Windows.ComboBoxSource.SubscribeControlEvents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ComboBoxSource.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ComboBoxSource.Control">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ComboBoxSource.OriginText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ComboBoxSource.OriginSelectedIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ComboBoxSource.ListenTarget">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ComboBoxSource.ListenOnValidated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ComboBoxSource.ListenAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.ComboBoxSource.ListenAttribute.SelectedIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.ComboBoxSource.ListenAttribute.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.DataGridViewSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DataGridViewSource.#ctor(System.Windows.Forms.DataGridView)">
+            <summary>
+            
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Campus.Windows.DataGridViewSource.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DataGridViewSource.OriginValues">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DataGridViewSource.Grid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.NumericUpDownSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.NumericUpDownSource.#ctor(System.Windows.Forms.NumericUpDown)">
+            <summary>
+            
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Campus.Windows.NumericUpDownSource.Reset">
+            <summary>
+            重設狀態為「Clean」。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.NumericUpDownSource.Control">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.NumericUpDownSource.OriginValue">
+            <summary>
+            原始的資料(執行過 Reset 之後的資料)。
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.RadioButtonSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.RadioButtonSource.#ctor(System.Windows.Forms.RadioButton[])">
+            <summary>
+            
+            </summary>
+            <param name="controls"></param>
+        </member>
+        <member name="M:Campus.Windows.RadioButtonSource.Reset">
+            <summary>
+            重設狀態為「Clean」。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.RadioButtonSource.Controls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.TextBoxSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.TextBoxSource.#ctor(System.Windows.Forms.TextBox)">
+            <summary>
+            
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Campus.Windows.TextBoxSource.Reset">
+            <summary>
+            重設狀態為「Clean」。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.TextBoxSource.Control">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.TextBoxSource.OriginValue">
+            <summary>
+            原始的資料(執行過 Reset 之後的資料)。
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.CampusConfiguration`1">
+            <summary>
+            通用型的新增、更新、刪除及匯入匯出表單
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Campus.Windows.ConfigurationItem">
+            <summary>
+            系統設定介面
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.IConfigurationItem">
+            <summary>
+            系統設定項目
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.IConfigurationItem.Active">
+            <summary>
+            當此項目第一次被開啟時
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationItem.TabGroup">
+            <summary>
+            所屬的設定群組
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationItem.HasControlPanel">
+            <summary>
+            是否有控制頁面
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationItem.ControlPanel">
+            <summary>
+            控制頁面(當HasControlPanel為true時)
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationItem.ContentPanel">
+            <summary>
+            內容頁面
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationItem.Caption">
+            <summary>
+            項目名稱
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationItem.Category">
+            <summary>
+            項目類別
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationItem.Image">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationItem.#ctor">
+            <summary>
+            無參數建構式
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationItem.Active">
+            <summary>
+            啟動時呼叫
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationItem.OnActive">
+            <summary>
+            當此項目第一次被開啟時
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationItem.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Campus.Windows.ConfigurationItem.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationItem.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該公開 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationItem.InitializeComponent">
+             <summary> 
+             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
+            
+             </summary>
+        </member>
+        <member name="F:Campus.Windows.ConfigurationItem.pnlControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.ConfigurationItem.pnlContent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationItem.TabGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationItem.HasControlPanel">
+            <summary>
+            擁有ControlPanel
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationItem.ControlPanel">
+            <summary>
+            左方的控制項目
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationItem.ContentPanel">
+            <summary>
+            右方的內容項目
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationItem.Caption">
+            <summary>
+            項目名稱
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationItem.Category">
+            <summary>
+            項目類別
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationItem.Image">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.#ctor(Campus.Windows.IConfigurationDataAccess{`0},Campus.Windows.IContentEditor{`0})">
+            <summary>
+            建構式，傳入DataAccess物件
+            </summary>
+            <param name="vEditor"></param>
+            <param name="vDataAccess"></param>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.GetSelectedName">
+            <summary>
+            取得選取名稱
+            </summary>
+            <returns>選擇名稱</returns>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.Refill">
+            <summary>
+            重新取得資料項目名稱
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.OnActive">
+            <summary>
+            當被呼叫時填入時
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.btnInsert_Click(System.Object,System.EventArgs)">
+            <summary>
+            新增項目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.btnDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            刪除項目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.btnUpdate_Click(System.Object,System.EventArgs)">
+            <summary>
+            更新項目
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.grdNameList_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            當選取項目改變時
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Campus.Windows.CampusConfiguration`1.components">
+            <summary>
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.Dispose(System.Boolean)">
+            <summary>
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該公開 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Campus.Windows.CampusConfiguration`1.InitializeComponent">
+             <summary>
+             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
+            
+             </summary>
+        </member>
+        <member name="T:Campus.Windows.ConfigurationForm">
+            <summary>
+            最後呈現的設定表單
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationForm.#ctor(Campus.Windows.IConfigurationItem)">
+            <summary>
+            
+            </summary>
+            <param name="vConfigurationItem"></param>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationForm.ConfigurationForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            載入表單事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationForm.Active">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.ConfigurationForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Campus.Windows.ConfigurationForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationForm.Caption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationForm.Category">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationForm.ContentPanel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationForm.ControlPanel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationForm.HasControlPanel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationForm.Image">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ConfigurationForm.TabGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.IConfigurationDataAccess`1">
+            <summary>
+            提供與ConfigurationForm整合的資料存介面
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Campus.Windows.IConfigurationDataAccess`1.SelectKeys">
+            <summary>
+            取得鍵值名稱，用來做畫面左方顯示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.IConfigurationDataAccess`1.Insert(System.String,System.String)">
+            <summary>
+            根據名稱來新增，並可傳入複製名稱以複製現有資料
+            </summary>
+            <param name="NewKey">新的鍵值名稱</param>
+            <param name="CopyKey">要複製的鍵值名稱</param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.IConfigurationDataAccess`1.Delete(System.String)">
+            <summary>
+            根據鍵值名稱刪除資料
+            </summary>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.IConfigurationDataAccess`1.Select(System.String)">
+            <summary>
+            根據鍵值名稱選出資料
+            </summary>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.IConfigurationDataAccess`1.Save(`0)">
+            <summary>
+            根據資料來更新值
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationDataAccess`1.DisplayName">
+            <summary>
+            顯示名稱，例如TimeTable會顯示時間表
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IConfigurationDataAccess`1.ExtraCommands">
+            <summary>
+            匯出
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.IContentEditor`1">
+            <summary>
+            內容編輯器
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Campus.Windows.IContentViewer`1">
+            <summary>
+            內容檢視器
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Campus.Windows.IContentViewer`1.Prepare">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IContentViewer`1.Content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.IContentViewer`1.Control">
+            <summary>
+            顯示的UserControl
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.IContentEditor`1.Validate">
+            <summary>
+            驗證內容是否合法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.Windows.IContentEditor`1.Content">
+            <summary>
+            取得或設定內容
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ICommand">
+            <summary>
+            代表UI的某個動作
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ICommand.Execute(System.Object)">
+            <summary>
+            執行此命令
+            </summary>
+            <returns>回傳執行結果</returns>
+        </member>
+        <member name="P:Campus.Windows.ICommand.Text">
+            <summary>
+            命令代碼
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ICommand.Name">
+            <summary>
+            命令名稱
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ICommand.IsChangeData">
+            <summary>
+            是否有異動資料
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.DateTimeTextBox">
+            <summary>
+            輸入日期格式的TextBox
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DateTimeTextBox.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DateTimeTextBox.OnTextChanged(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.DateTimeTextBox.OnValidated(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.DateTimeTextBox.SetDate(System.String)">
+            <summary>
+            設定初始值
+            </summary>
+            <param name="value">初始值</param>
+        </member>
+        <member name="M:Campus.Windows.DateTimeTextBox.GetDateString(System.String)">
+            <summary>
+            取得轉換後的日期字串
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.DateTimeTextBox.GetDate">
+            <summary>
+            取得輸入的日期
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.Windows.DateTimeTextBox.DateString">
+            <summary>
+            取回符合日期格式之標準日期文字
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DateTimeTextBox.AllowNull">
+            <summary>
+            是否允許空白
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DateTimeTextBox.EmptyString">
+            <summary>
+            當內容不符日期格式時的傳回值
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DateTimeTextBox.IsValid">
+            <summary>
+            判斷是否合法
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.DesktopLayout">
+            <summary>
+            代表 ischool Desktop Layout。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DesktopLayout.#ctor">
+            <summary>
+            建立一個包含「學生、班級、教師、課程」的基本 Layout
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DesktopLayout.#ctor(Campus.Windows.TabOptions)">
+            <summary>
+            自行選擇要顯示的 Tab。
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Campus.Windows.DesktopLayout.SetupPresentation">
+            <summary>
+            初始化 MotherForm 的基本 Layout。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DesktopLayout.TabOptions">
+            <summary>
+            初始化時包含的 Tab，不含其他模組自行增加的。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DesktopLayout.ShowSecurityMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DesktopLayout.ShowRestartMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.TabOptions">
+            <summary>
+            代表 Entity 的 Tab 選項。
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.TabOptions.Student">
+            <summary>
+            顯示「學生」標籤。
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.TabOptions.Class">
+            <summary>
+            顯示「班級」標籤。
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.TabOptions.Teacher">
+            <summary>
+            顯示「教師」標籤。
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.TabOptions.Course">
+            <summary>
+            顯示「課程」標籤。
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.DetailContentImproved">
+            <summary>
+            增加各項基本重要功能的資料項目。
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.DetailContentImproved.ChangeListen">
+            <summary>
+            提供自動處理 Save、Cancel 出現時機。
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.DetailContentImproved.Inited">
+            <summary>
+            指示是否已經初始化過了。
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.DetailContentImproved.InitedSyncObj">
+            <summary>
+            用於同步。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.WatchChange(Campus.Windows.IChangeSource)">
+            <summary>
+            新增變更接聽。
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.BeginChangeControlData">
+            <summary>
+            指示正在改變控制項的資料，這將使變更接聽暫停運作。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.EndChangeControlData">
+            <summary>
+            指示控制項的資料變更已經完成，這將使變更接聽開始運作。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.ResetDirtyStatus">
+            <summary>
+            重設資料修改狀態。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnPrimaryKeyChanged(System.EventArgs)">
+            <summary>
+            覆寫此方法後，如果沒有呼叫 base.OnPrimaryKeyChanged 的話，將不會引發 OnPrimaryKeyChangedProcessing 方法。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.ReInitialize">
+            <summary>
+            指示重新初始化相關資料。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnInitializeAsync">
+            <summary>
+            當資料項目第一次載入資料前，並且在背景執行。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnInitializeComplete(System.Exception)">
+            <summary>
+            OnInitializeAsync 完成之後執行，在前景執行。
+            </summary>
+            <param name="error">如果處理過程有發生錯誤，則不為 Null。</param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnPrimaryKeyChangedAsync">
+            <summary>
+            當 PrimaryKey 變更時，此方法會在背景呼叫。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnPrimaryKeyChangedComplete(System.Exception)">
+            <summary>
+            當 OnPrimaryKeyChangedAsync 完成時，會在前景呼叫此方法。
+            </summary>
+            <param name="error">如果處理過程有發生錯誤，則不為 Null。</param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnSaveButtonClick(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnValidateData(System.Collections.Generic.Dictionary{System.Windows.Forms.Control,System.String})">
+            <summary>
+            儲存前驗證資料。
+            </summary>
+            <param name="errors">錯誤資訊。</param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnSaveData">
+            <summary>
+            當要儲存資料時。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnDirtyStatusChanged(Campus.Windows.ChangeEventArgs)">
+            <summary>
+            當資料有被變更異動時發生(需配合 WatchChange 方法)。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.OnCancelButtonClick(System.EventArgs)">
+            <summary>
+            當使用者按下儲存按鈕時。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Campus.Windows.DetailContentImproved.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImproved.InitializeComponent">
+            <summary> 
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器
+            修改這個方法的內容。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DetailContentImproved.PrimaryKeyPadding">
+            <summary>
+            取得是否有 PrimaryKey 等待處理。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DetailContentImproved.PrimaryKeyTask">
+            <summary>
+            背景工作執行緒。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DetailContentImproved.UISyncContext">
+            <summary>
+            取得 UI 排程器，用於排程相關工作於 UI 執行緒執行。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DetailContentImproved.Backend">
+            <summary>
+            直接查詢。 
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DetailContentImproved.ErrorTip">
+            <summary>
+            提供畫面錯誤提示。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DetailContentImproved.IsInitialized">
+            <summary>
+            取得是否已經初始化完成。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DetailContentImproved.Permission">
+            <summary>
+            取得目前資料項目的權限，需標示 AccessControlAttribute 屬性(Attribute)此屬性(Property)才會有作用。
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.DetailItem_Extend">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.DetailItem_Extend.FeatureCodes">
+            <summary>
+            已使用的 FeatureCode 清單，以防重覆 Register。
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.DetailItem_Extend.ACL">
+            <summary>
+            記錄每一個型別的權限屬性資訊。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailItem_Extend.RegisterDetailContent``1(FISCA.Presentation.NLDPanel)">
+            <summary>
+            註冊資料項目，並且一併處理權限問題。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="panel"></param>
+        </member>
+        <member name="F:Campus.Windows.DetailItem_Extend.VisibleChanging">
+            <summary>
+            防止 SaveButtonVisibleChanged 事件重覆發生。
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.AccessControlAttribute">
+            <summary>
+            提供權限項目的預設分類，例：學生>資料項目，權限將會放在「學生」分類下的「資料項目」分類。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.AccessControlAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            提供權限項目的預設分類，例：學生>資料項目。
+            </summary>
+            <param name="path">分類路徑，例：學生>資料項目。</param>
+            <param name="code"></param>
+            <param name="title"></param>
+        </member>
+        <member name="P:Campus.Windows.AccessControlAttribute.Path">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.DetailContentImprovedMsg.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImprovedMsg.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Campus.Windows.DetailContentImprovedMsg.InitializeComponent">
+            <summary> 
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器
+            修改這個方法的內容。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.DetailContentImprovedMsg.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ListPaneFieldImproved">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ListPaneFieldImproved.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="title">要顯示的標題文字。</param>
+            <param name="fieldName">對應資料庫或是 Value Object 的欄位名稱。</param>
+        </member>
+        <member name="M:Campus.Windows.ListPaneFieldImproved.CompareValue(System.Object,FISCA.Presentation.CompareValueEventArgs)">
+            <summary>
+            是供排序的邏輯。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.ListPaneFieldImproved.GetDataAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="primaryKeys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.ListPaneFieldImproved.Register(FISCA.Presentation.NLDPanel)">
+            <summary>
+            將欄位註冊到畫面上。
+            </summary>
+            <param name="panel"></param>
+        </member>
+        <member name="M:Campus.Windows.ListPaneFieldImproved.Reload">
+            <summary>
+            重新讀取欄位資料。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ListPaneFieldImproved.Reload(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            重新讀取欄位資料。
+            </summary>
+            <param name="primaryKeys"></param>
+        </member>
+        <member name="P:Campus.Windows.ListPaneFieldImproved.Backend">
+            <summary>
+            後端資料查詢提供者。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ListPaneFieldImproved.CacheProvider">
+            <summary>
+            資料快取提供者，如果不指定則內部則不使用快取。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ListPaneFieldImproved.FieldName">
+            <summary>
+            對應的資料庫欄位或是 Value Object 屬性名稱。
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ListPaneFieldImproved.Value">
+            <summary>
+            代表欄位值。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.ListPaneFieldImproved.Value.#ctor(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="val"></param>
+            <param name="toolTip"></param>
+        </member>
+        <member name="P:Campus.Windows.ListPaneFieldImproved.Value.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ListPaneFieldImproved.Value.Val">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.ListPaneFieldImproved.Value.ToolTip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.MsgBox">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.MsgBox.Show(System.String)">
+            <summary>
+            訊息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.MsgBox.Show(System.String,System.String)">
+            <summary>
+            訊息,標題(預設使用確定按鈕)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.MsgBox.Show(System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            訊息,Buttons(包含產品名稱)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.MsgBox.Show(System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            訊息,Buttons(包含產品名稱)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.MsgBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            訊息,標題,Buttons
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.MsgBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            訊息,標題,Buttons,Icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.MsgBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            訊息,標題,Buttons,Icon,DefaultButton(預設停在"否"的MessageBox)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Campus.Windows.NameCreatorForm`1">
+            <summary>
+            根據名稱產生新記錄的表單
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.NameCreatorForm`1.#ctor(Campus.Windows.IConfigurationDataAccess{`0})">
+            <summary>
+            建構式，傳入NameCreatorForm所需要的資料存取物件
+            </summary>
+            <param name="vDataAccess">資料存取物件</param>
+        </member>
+        <member name="M:Campus.Windows.NameCreatorForm`1.txtName_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            當選擇名稱改變時
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.NameCreatorForm`1.btnClose(System.Object,System.EventArgs)">
+            <summary>
+            按下關閉按鈕時的動作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.NameCreatorForm`1.btnSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            當按下儲存按鈕時所觸發的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Campus.Windows.NameCreatorForm`1.cmbNames_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            當選擇項目改變時的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Campus.Windows.NameCreatorForm`1.components">
+            <summary>
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.NameCreatorForm`1.Dispose(System.Boolean)">
+            <summary>
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該公開 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Campus.Windows.NameCreatorForm`1.InitializeComponent">
+             <summary>
+             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
+            
+             </summary>
+        </member>
+        <member name="P:Campus.Windows.NameCreatorForm`1.NewName">
+            <summary>
+            新的名稱
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.NameCreatorForm`1.DuplicateName">
+            <summary>
+            要複製的名稱
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強型別資源類別
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強型別資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.Extension_DataTable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.Extension_DataTable.Each(System.Data.DataTable,System.Action{System.Data.DataRow})">
+            <summary>
+            處理每一個 Row。
+            </summary>
+            <param name="dt"></param>
+            <param name="function"></param>
+        </member>
+        <member name="T:Campus.Windows.TextViewer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.TextViewer.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.TextViewer.ViewText(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Campus.Windows.TextViewer.ViewXml(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Campus.Windows.TextViewer.Format(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="xmlContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Windows.TextViewer.GetXmlReader(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="XmlData"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Campus.Windows.TextViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.TextViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Campus.Windows.TextViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.BlockMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.BlockMessage.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.BlockMessage.Display(System.String,Campus.Windows.ProcessInvoker)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="method"></param>
+        </member>
+        <member name="F:Campus.Windows.BlockMessage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.BlockMessage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Campus.Windows.BlockMessage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.MessageArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.MessageArgs.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Campus.Windows.MessageArgs.Cancel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.ProcessInvoker">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:Campus.Windows.winConfiguration`1">
+            <summary>
+            新增、修改、刪除及匯入匯出表單
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Campus.Windows.winConfiguration`1.#ctor(Campus.Windows.IConfigurationDataAccess{`0},Campus.Windows.IContentEditor{`0})">
+            <summary>
+            建構式，傳入資料存取及資料編輯介面即可運作
+            </summary>
+            <param name="vDataAccess"></param>
+            <param name="vEditor"></param>
+        </member>
+        <member name="M:Campus.Windows.winConfiguration`1.ShowDialog">
+            <summary>
+            顯示表單
+            </summary>
+        </member>
+        <member name="T:Campus.Windows.XTextViewer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.XTextViewer.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.XTextViewer.ViewText(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Campus.Windows.XTextViewer.ViewXml(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Campus.Windows.XTextViewer.Format">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Campus.Windows.XTextViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Campus.Windows.XTextViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Campus.Windows.XTextViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

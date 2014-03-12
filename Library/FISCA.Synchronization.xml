@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FISCA.Synchronization</name>
+    </assembly>
+    <members>
+        <member name="T:FISCA.Synchronization.DBChangeMonitor">
+            <summary>
+            代表資料表變動監視器。
+            </summary>
+        </member>
+        <member name="M:FISCA.Synchronization.DBChangeMonitor.#ctor(System.Int32,FISCA.Synchronization.IChangeSetProvider[])">
+            <summary>
+            建立 TableDtaMonitor 實體。
+            </summary>
+            <param name="interval">檢查資料變動的時間間隔，以秒為單位。</param>
+        </member>
+        <member name="M:FISCA.Synchronization.DBChangeMonitor.GetChangeSet">
+            <summary>
+            從每個IChangeSetProvider取得異動列表。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Synchronization.DBChangeMonitor.SetBaseLine">
+            <summary>
+            設定變更的基礎線，設定之後的變更才要  Monitor。
+            </summary>
+        </member>
+        <member name="M:FISCA.Synchronization.DBChangeMonitor.Start">
+            <summary>
+            開始啟動 Monitor。
+            </summary>
+        </member>
+        <member name="M:FISCA.Synchronization.DBChangeMonitor.Suspend">
+            <summary>
+            停止 Monitor。
+            </summary>
+        </member>
+        <member name="M:FISCA.Synchronization.DBChangeMonitor.Resume">
+            <summary>
+            重新啟動 Monitor
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.DBChangeMonitor.Item(System.String)">
+            <summary>
+            取得指定資料表的 Monitor。
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.DBChangeMonitor.IsMonitor">
+            <summary>
+            傳回目前Monitor的狀態
+            </summary>
+        </member>
+        <member name="T:FISCA.Synchronization.KeySet">
+            <summary>
+            代表一組 Key 的集合。
+            </summary>
+        </member>
+        <member name="M:FISCA.Synchronization.KeySet.Contains(System.String)">
+            <summary>
+            判斷某 Key 是否存在。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Synchronization.KeySet.AsDictionary">
+            <summary>
+            將資料轉換成 Dictionary。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Synchronization.KeySet.ToString">
+            <summary>
+            產生以逗號分隔的 Key 清單。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Synchronization.KeySet.Count">
+            <summary>
+            取得 Key 的數量。
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.KeySet.Item(System.String)">
+            <summary>
+            取得指定 Key 的 ChangeEntry。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Synchronization.IChangeSetProvider.GetChangeSet">
+            <summary>
+            取得有變更的資料清單。
+            </summary>
+        </member>
+        <member name="M:FISCA.Synchronization.IChangeSetProvider.SetClientChangeSet(System.Collections.Generic.IEnumerable{FISCA.Synchronization.ChangeEntry})">
+            <summary>
+            設定Client端的ChangeSet
+            </summary>
+        </member>
+        <member name="M:FISCA.Synchronization.IChangeSetProvider.SetBaseLine">
+            <summary>
+            設定 ChangeSet 的 BaseLine，以目前最新的 Sequence 為基礎。
+            </summary>
+        </member>
+        <member name="M:FISCA.Synchronization.IChangeSetProvider.SetBaseLine(System.Int64)">
+            <summary>
+            設定 ChangeSet 的 BaseLine，並可指定 Sequence。
+            </summary>
+            <param name="sequence"></param>
+        </member>
+        <member name="T:FISCA.Synchronization.ChangeEntry">
+            <summary>
+            異動項目
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.ChangeEntry.Sequence">
+            <summary>
+            異動編號
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.ChangeEntry.TableName">
+            <summary>
+            表格名稱
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.ChangeEntry.DataID">
+            <summary>
+            資料的鍵值
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.ChangeEntry.Timestamp">
+            <summary>
+            資料異動時間
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.ChangeEntry.Action">
+            <summary>
+            資料異動類別
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.ChangeEntry.Count">
+            <summary>
+            異動次數，從Baseline之後對同一筆資料的相同異動次數
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.TableChangeMonitor.TableName">
+            <summary>
+            資料表名稱。
+            </summary>
+        </member>
+        <member name="E:FISCA.Synchronization.TableChangeMonitor.RecordInserted">
+            <summary>
+            當資料 Insert 時引發。
+            </summary>
+        </member>
+        <member name="E:FISCA.Synchronization.TableChangeMonitor.RecordUpdated">
+            <summary>
+            當資料 Update 時引發。
+            </summary>
+        </member>
+        <member name="E:FISCA.Synchronization.TableChangeMonitor.RecordDeleted">
+            <summary>
+            當資料 Delete 時引發。
+            </summary>
+        </member>
+        <member name="T:Framework.DataSynchronization.UDTChangeSetProvider">
+            <summary>
+            User Define Table ChangeSet Provider.
+            </summary>
+        </member>
+        <member name="T:FISCA.Synchronization.TableConsts">
+            <summary>
+            資料表名稱常數。
+            </summary>
+        </member>
+        <member name="F:FISCA.Synchronization.TableConsts.Student">
+            <summary>
+            學生資料表。
+            </summary>
+        </member>
+        <member name="F:FISCA.Synchronization.TableConsts.Class">
+            <summary>
+            班班級資料表。
+            </summary>
+        </member>
+        <member name="F:FISCA.Synchronization.TableConsts.Teacher">
+            <summary>
+            教師資料表。
+            </summary>
+        </member>
+        <member name="F:FISCA.Synchronization.TableConsts.Course">
+            <summary>
+            課程資料表。
+            </summary>
+        </member>
+        <member name="P:FISCA.Synchronization.TableChangedEventArgs.PrimaryKeys">
+            <summary>
+            取得已變動的 Key。
+            </summary>
+        </member>
+    </members>
+</doc>
