@@ -7,6 +7,7 @@ E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBa
 E:\TFServer2013\ischoolteam\ischool_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.pdb
 E:\github\NTU_EMBA\UDTDetailContentBase\UDTDetailContentBase\bin\Debug\UDTDetailContentBase.dll
 E:\github\NTU_EMBA\UDTDetailContentBase\UDTDetailContentBase\bin\Debug\UDTDetailContentBase.pdb
+E:\github\NTU_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.csprojResolveAssemblyReference.cache
 E:\github\NTU_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.UDTSingleForm.resources
 E:\github\NTU_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.csproj.GenerateResource.Cache
 E:\github\NTU_EMBA\UDTDetailContentBase\UDTDetailContentBase\obj\Debug\UDTDetailContentBase.dll
